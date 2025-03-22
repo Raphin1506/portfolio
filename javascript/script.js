@@ -15,3 +15,21 @@ function toggleMenu() {
         nav.style.display = "none";
     }
 }
+
+function ajustarPortfolio() {
+    let textos = document.querySelectorAll(".portfolio-layer p");
+    let larguraTela = window.innerWidth;
+
+    textos.forEach(texto => {
+        if (larguraTela <= 780) {
+            texto.style.display = "none";
+        } else {
+            texto.style.display = "block"; 
+        }
+    });
+}
+
+ajustarPortfolio();
+
+window.addEventListener("resize", ajustarPortfolio);
+
